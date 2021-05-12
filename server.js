@@ -37,9 +37,9 @@ app.post("/api/users/:_id/exercises", (req, res, next) => {
     .then((userSaved) => {
       res.json({
         _id: idUser,
-        username: userSaved.username,
+        username: userSaved.username, 
         date: date,
-        duration: parserInt(duration),
+        duration: userSaved.duration,
         description: description
       });
     })
