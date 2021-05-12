@@ -39,7 +39,7 @@ app.post("/api/users/:_id/exercises", (req, res, next) => {
         _id: idUser,
         username: userSaved.username,
         date: date,
-        duration: duration,
+        duration: parserInt(duration),
         description: description
       });
     })
